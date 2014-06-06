@@ -1,5 +1,7 @@
 # JquerySlickRails
 
+[![Gem Version](https://badge.fury.io/rb/jquery-slick-rails.svg)](http://badge.fury.io/rb/jquery-slick-rails)
+
 A ruby gem that uses the Rails asset pipeline to include the jQuery Slick plugin by Ken Wheeler
 (https://kenwheeler.github.io/slick/).
 
