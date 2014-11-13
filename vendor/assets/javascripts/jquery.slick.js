@@ -6,7 +6,7 @@
  |___/_|_|\___|_|\_(_)/ |___/
  |__/
 
- Version: 1.3.14
+ Version: 1.3.15
  Author: Ken Wheeler
  Website: http://kenwheeler.github.io
  Docs: http://kenwheeler.github.io/slick
@@ -268,11 +268,11 @@
                     step: function(now) {
                         if (_.options.vertical === false) {
                             animProps[_.animType] = 'translate(' +
-                                now + 'px, 0px)';
+                            now + 'px, 0px)';
                             _.$slideTrack.css(animProps);
                         } else {
                             animProps[_.animType] = 'translate(0px,' +
-                                now + 'px)';
+                            now + 'px)';
                             _.$slideTrack.css(animProps);
                         }
                     },
@@ -447,7 +447,7 @@
         var _ = this;
 
         _.$slides = _.$slider.children(_.options.slide +
-            ':not(.slick-cloned)').addClass(
+        ':not(.slick-cloned)').addClass(
             'slick-slide');
         _.slideCount = _.$slides.length;
 
@@ -508,7 +508,7 @@
         }
 
         if (_.originalSettings.responsive && _.originalSettings
-            .responsive.length > -1 && _.originalSettings.responsive !== null) {
+                .responsive.length > -1 && _.originalSettings.responsive !== null) {
 
             targetBreakpoint = null;
 
@@ -579,11 +579,11 @@
 
             case 'index':
                 var index = event.data.index === 0 ? 0 :
-                    event.data.index || $(event.target).parent().index() * _.options.slidesToScroll;
+                event.data.index || $(event.target).parent().index() * _.options.slidesToScroll;
 
                 navigables = _.getNavigableIndexes();
                 prevNavigable = 0;
-                if(navigables.indexOf(index) === -1) {
+                if(navigables[index] && navigables[index] === index) {
                     if(index > navigables[navigables.length -1]){
                         index = navigables[navigables.length -1];
                     } else {
@@ -1539,7 +1539,7 @@
                 }
 
                 for (i = _.slideCount; i > (_.slideCount -
-                    infiniteCount); i -= 1) {
+                infiniteCount); i -= 1) {
                     slideIndex = i - 1;
                     $(_.$slides[slideIndex]).clone(true).attr('id', '')
                         .attr('index', slideIndex-_.slideCount)
