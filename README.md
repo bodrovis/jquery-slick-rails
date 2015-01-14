@@ -35,6 +35,8 @@ and this line
 
 into your `application.css.scss`.
 
+You may use [this](https://github.com/bodrovis/jquery-slick-rails-demo) simple Rails app as an example.
+
 ## Contributing
 
 1. Fork it
