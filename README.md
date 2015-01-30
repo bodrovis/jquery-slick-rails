@@ -35,6 +35,11 @@ and this line
 
 into your `application.css.scss`.
 
+Starting from version **1.4.0** Slick provides an optional theme, so if you want to employ default styling, include
+the following line:
+
+    @import 'slick-theme';
+
 You may use [this](https://github.com/bodrovis/jquery-slick-rails-demo) simple Rails app as an example.
 
 ## Contributing
@@ -49,4 +54,4 @@ You may use [this](https://github.com/bodrovis/jquery-slick-rails-demo) simple R
 
 This plugin is licensed under the [MIT License](https://github.com/bodrovis/jquery-slick-rails/blob/master/LICENSE.txt).
 
-Copyright (c) 2014 [Ilya Bodrov](http://radiant-wind.com)
+Copyright (c) 2015 [Ilya Bodrov](http://radiant-wind.com)
