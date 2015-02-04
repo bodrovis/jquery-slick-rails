@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.summary     = "Integrates Slick carousel into Rails app."
   s.description = "Integrates Slick carousel, a jQuery plugin by Ken Wheeler, into your Rails app."
 
-  s.files         = Dir["{lib,vendor}/**/*"] + ["LICENSE", "README.md"]
+  s.files         = Dir["{lib,app}/**/*"] + ["LICENSE", "README.md"]
   s.executables   = s.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
   s.test_files    = s.files.grep(%r{^(test|spec|features)/})
   s.require_paths = ["lib"]
