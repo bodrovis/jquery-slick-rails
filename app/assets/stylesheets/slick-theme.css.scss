@@ -2,7 +2,7 @@
 /* Slider */
 .slick-loading .slick-list
 {
-    background: #fff url('ajax-loader.gif') center center no-repeat;
+    background: #fff image-url('ajax-loader.gif') center center no-repeat;
 }
 
 /* Icons */
@@ -12,8 +12,8 @@
     font-weight: normal;
     font-style: normal;
 
-    src: url('slick.eot');
-    src: url('slick.eot?#iefix') format('embedded-opentype'), url('slick.woff') format('woff'), url('slick.ttf') format('truetype'), url('slick.svg#slick') format('svg');
+    src: asset-url('slick.eot');
+    src: asset-url('slick.eot?#iefix') format('embedded-opentype'), asset-url('slick.woff') format('woff'), asset-url('slick.ttf') format('truetype'), asset-url('slick.svg#slick') format('svg');
 }
 /* Arrows */
 .slick-prev,
