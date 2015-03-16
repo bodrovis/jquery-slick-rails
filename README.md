@@ -1,4 +1,4 @@
-# JquerySlickRails
+# jQuerySlickRails
 
 [![Gem Version](https://badge.fury.io/rb/jquery-slick-rails.svg)](http://badge.fury.io/rb/jquery-slick-rails)
 
@@ -25,20 +25,38 @@ NOTE: this is a jQuery plugin so you will also need the `jquery-rails` gem:
 
 ## Usage
 
-In your `application.js` you will need to add this line:
+You will need to add this line into your `application.js`:
 
     //= require jquery.slick
 
-and this line
+Add
 
     @import 'slick';
 
-into your `application.css.scss`.
+into `application.scss` or
+
+    /*
+    [...]
+    *= require slick
+    [...]
+    */
+
+into `application.css`.
 
 Starting from version **1.4.0** Slick provides an optional theme, so if you want to employ default styling, include
 the following line:
 
     @import 'slick-theme';
+
+into `application.scss` or
+
+    /*
+    [...]
+    *= require slick-theme
+    [...]
+    */
+
+into `application.css`.
 
 You may use [this](https://github.com/bodrovis/jquery-slick-rails-demo) simple Rails app as an example.
 
