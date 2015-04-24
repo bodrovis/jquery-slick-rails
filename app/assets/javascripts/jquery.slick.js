@@ -6,7 +6,7 @@
  |___/_|_|\___|_|\_(_)/ |___/
  |__/
 
- Version: 1.5.0
+ Version: 1.5.1
  Author: Ken Wheeler
  Website: http://kenwheeler.github.io
  Docs: http://kenwheeler.github.io/slick
@@ -782,7 +782,7 @@
 
     _.cleanUpEvents();
 
-    $('.slick-cloned', _.$slider).remove();
+    $('.slick-cloned', _.$slider).detach();
 
     if (_.$dots) {
       _.$dots.remove();
@@ -796,7 +796,7 @@
 
     if (_.$slides) {
       _.$slides.removeClass('slick-slide slick-active slick-center slick-visible')
-          .attr('aria-hidden', 'true')
+          .removeAttr('aria-hidden')
           .removeAttr('data-slick-index')
           .css({
             position: '',
@@ -807,7 +807,13 @@
             width: ''
           });
 
-      _.$slider.html(_.$slides);
+      _.$slideTrack.children(this.options.slide).detach();
+
+      _.$slideTrack.detach();
+
+      _.$list.detach();
+
+      _.$slider.append(_.$slides);
     }
 
     _.cleanUpRows();
@@ -902,7 +908,11 @@
     var pagerQty = 0;
 
     if (_.options.infinite === true) {
-      pagerQty = Math.ceil(_.slideCount / _.options.slidesToScroll);
+      while (breakPoint < _.slideCount) {
+        ++pagerQty;
+        breakPoint = counter + _.options.slidesToShow;
+        counter += _.options.slidesToScroll <= _.options.slidesToShow ? _.options.slidesToScroll : _.options.slidesToShow;
+      }
     } else if (_.options.centerMode === true) {
       pagerQty = _.slideCount;
     } else {
