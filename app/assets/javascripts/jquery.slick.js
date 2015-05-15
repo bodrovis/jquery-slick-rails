@@ -6,7 +6,7 @@
  |___/_|_|\___|_|\_(_)/ |___/
  |__/
 
- Version: 1.5.3
+ Version: 1.5.5
  Author: Ken Wheeler
  Website: http://kenwheeler.github.io
  Docs: http://kenwheeler.github.io/slick
@@ -566,8 +566,10 @@
       };
       _.$slider.html(newSlides);
       _.$slider.children().children().children()
-          .width((100 / _.options.slidesPerRow) + "%")
-          .css({'display': 'inline-block'});
+          .css({
+            'width':(100 / _.options.slidesPerRow) + "%",
+            'display': 'inline-block'
+          });
     };
 
   };
