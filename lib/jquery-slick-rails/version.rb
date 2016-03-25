@@ -1,3 +1,3 @@
 module JquerySlickRails
-  VERSION = "1.5.9.1"
+  VERSION = "1.6.0"
 end
