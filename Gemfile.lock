@@ -2,7 +2,7 @@ PATH
   remote: .
   specs:
     jquery-slick-rails (1.6.0)
-      railties (>= 3.1)
+      railties (>= 3.1, < 4)
 
 GEM
   remote: http://rubygems.org/
@@ -97,7 +97,7 @@ PLATFORMS
 DEPENDENCIES
   jquery-rails
   jquery-slick-rails!
-  rails (~> 3.2.12)
+  rails (~> 3.2)
   test-unit (~> 3.1)
 
 BUNDLED WITH
