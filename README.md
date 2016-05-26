@@ -59,7 +59,8 @@ into `application.scss` or
 
 into `application.css`.
 
-You may use [this](https://github.com/bodrovis/jquery-slick-rails-demo) simple Rails app as an example.
+You may use [this](https://github.com/bodrovis/jquery-slick-rails-demo) simple Rails app as an example
+(it also shows how to use the plugin with Turbolinks).
 
 ## Testing
 
