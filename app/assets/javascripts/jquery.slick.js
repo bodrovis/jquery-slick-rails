@@ -2431,9 +2431,9 @@
             animSlide = targetSlide;
         }
 
-        _.animating = true;
-
         _.$slider.trigger('beforeChange', [_, _.currentSlide, animSlide]);
+
+        _.animating = true;
 
         oldSlide = _.currentSlide;
         _.currentSlide = animSlide;
