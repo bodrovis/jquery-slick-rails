@@ -114,7 +114,8 @@
                 $list: null,
                 touchObject: {},
                 transformsEnabled: false,
-                unslicked: false
+                unslicked: false,
+                newAnimSlide: null
             };
 
             $.extend(_, _.initials);
@@ -2431,7 +2432,11 @@
             animSlide = targetSlide;
         }
 
+        _.newAnimSlide = animSlide
+        
         _.$slider.trigger('beforeChange', [_, _.currentSlide, animSlide]);
+
+        animSlide = _.newAnimSlide; //let beforeChange handler change the animslide
 
         _.animating = true;
 
