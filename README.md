@@ -85,4 +85,4 @@ and then
 
 This plugin is licensed under the [MIT License](https://github.com/bodrovis/jquery-slick-rails/blob/master/LICENSE.txt).
 
-Copyright (c) 2015 [Ilya Bodrov](http://radiant-wind.com)
+Copyright (c) 2016 [Ilya Bodrov](http://bodrovis.tech)
