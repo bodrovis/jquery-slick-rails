@@ -63,18 +63,16 @@ into `application.css`.
 You may use [this](https://github.com/bodrovis/jquery-slick-rails-demo) simple Rails app as an example
 (it also shows how to use the plugin with Turbolinks).
 
-## Gotcha
+## Turbolinks Gotcha
 
-Slick and browser back button with turbolinks
-
-you may want to make use of
+If you are using Slick with Turbolinks, you might run into some problems with the browser's "back" button.
+If that happens, the following solution might help:
 
     $(document).on('turbolinks:load', $('#my-slider').slick({}) 
     $(document).on('turbolinks:before-cache', $('#my-slider').slick('unslick')) 
 
-to make slick work in case it broke...
+Read more [on StackOverflow](http://stackoverflow.com/questions/39627881/jquery-plugin-initialization-on-browser-back-button-for-turbolinks-rails-5).
 
-as mentioned [on stackoverflow](http://stackoverflow.com/questions/39627881/jquery-plugin-initialization-on-browser-back-button-for-turbolinks-rails-5)
 ## Testing
 
 Run
