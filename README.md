@@ -37,9 +37,7 @@ Add
 into `application.scss` or
 
     /*
-    [...]
     *= require slick
-    [...]
     */
 
 into `application.css`.
