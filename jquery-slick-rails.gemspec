@@ -18,6 +18,6 @@ Gem::Specification.new do |s|
   s.test_files    = Dir["test/**/*"]
 
   s.add_dependency 'railties', '>= 3.1'
-  s.add_development_dependency "rails", "~> 3.2"
+  s.add_development_dependency "rails", "~> 5.1"
   s.add_development_dependency 'test-unit', '~> 3.1'
 end
