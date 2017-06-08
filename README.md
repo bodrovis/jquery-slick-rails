@@ -74,6 +74,12 @@ And then on any page that has Slick:
     
 The idea is that we are [opting the page out of caching](https://github.com/turbolinks/turbolinks#opting-out-of-caching), as Turbolinks uses it during [restoration visits](https://github.com/turbolinks/turbolinks#restoration-visits) (that is, when you click "back").
 
+Another solution was to employ the `unslick` method to prepare your document before Turbolinks caches it:
+
+    jQuery(document).on('turbolinks:before-cache', $('.scroller').slick('unslick'))
+    
+However, this does not seem to work anymore - maybe because [Slick has lots of opened issues related to unslick](https://github.com/kenwheeler/slick/search?q=unslick&type=Issues&utf8=%E2%9C%93).
+
 Read more [on StackOverflow](http://stackoverflow.com/questions/39627881/jquery-plugin-initialization-on-browser-back-button-for-turbolinks-rails-5).
 
 ## Testing
