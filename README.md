@@ -61,9 +61,9 @@ If you are using Slick with Turbolinks, you might run into some problems with th
 If that happens, the following solution *might help*. Add this code to your *layouts/application.html.erb*:
 
     <head>
-        <% if content_for?(:head) %>
-        <%= yield(:head) %>
-        <% end %>
+       <% if content_for?(:head) %>
+       <%= yield(:head) %>
+       <% end %>
     </head>
 
 And then on any page that has Slick:
@@ -72,7 +72,7 @@ And then on any page that has Slick:
       <meta name="turbolinks-cache-control" content="no-cache">
     <% end %>
     
-The idea is that we are opting the page out of caching, as Turbolinks uses it during [restoration visits](https://github.com/turbolinks/turbolinks#restoration-visits) (that is, when you click "back").
+The idea is that we are [opting the page out of caching](https://github.com/turbolinks/turbolinks#opting-out-of-caching), as Turbolinks uses it during [restoration visits](https://github.com/turbolinks/turbolinks#restoration-visits) (that is, when you click "back").
 
 Read more [on StackOverflow](http://stackoverflow.com/questions/39627881/jquery-plugin-initialization-on-browser-back-button-for-turbolinks-rails-5).
 
