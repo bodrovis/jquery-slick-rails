@@ -2,6 +2,7 @@
 
 [![Gem Version](https://badge.fury.io/rb/jquery-slick-rails.svg)](http://badge.fury.io/rb/jquery-slick-rails)
 [![Build Status](https://travis-ci.org/bodrovis/jquery-slick-rails.svg?branch=master)](https://travis-ci.org/bodrovis/jquery-slick-rails)
+[![Dependency Status](https://gemnasium.com/badges/github.com/bodrovis/jquery-slick-rails.svg)](https://gemnasium.com/github.com/bodrovis/jquery-slick-rails)
 
 A ruby gem that uses the Rails asset pipeline to include the jQuery Slick plugin by Ken Wheeler
 (https://kenwheeler.github.io/slick/).
