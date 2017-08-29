@@ -11,15 +11,21 @@ A ruby gem that uses the Rails asset pipeline to include the jQuery Slick plugin
 
 Add this line to your application's Gemfile:
 
-    gem "jquery-slick-rails"
+```ruby
+gem "jquery-slick-rails"
+```
 
 And then execute:
 
-    $ bundle
+```console
+$ bundle
+```
 
 Or install it yourself as:
 
-    $ gem install jquery-slick-rails
+```console
+$ gem install jquery-slick-rails
+```
 
 NOTE: this is a jQuery plugin so you will also need the `jquery-rails` gem (it is not added by default starting from Rails 5.1):
 
@@ -29,28 +35,39 @@ NOTE: this is a jQuery plugin so you will also need the `jquery-rails` gem (it i
 
 You will need to add this line into your `application.js`:
 
-    //= require jquery.slick
+```javascript
+//= require jquery.slick
+```
 
 Then into `application.scss`:
 
-    @import 'slick';
+```scss
+@import 'slick';
+```
 
 or into `application.css`:
 
-    /*
-    *= require slick
-    */
+```css
+/*
+*= require slick
+*/
+```
 
 Starting from version **1.4.0** Slick provides an optional theme, so if you want to employ default styling, include
 the following line into `application.scss`:
 
-    @import 'slick-theme';
+
+```scss
+@import 'slick-theme';
+```
 
 or into `application.css`:
 
-    /*
-    *= require slick-theme
-    */
+```css
+/*
+*= require slick-theme
+*/
+```
 
  
 You may use [this](https://github.com/bodrovis/jquery-slick-rails-demo) simple Rails app as an example
@@ -61,24 +78,31 @@ You may use [this](https://github.com/bodrovis/jquery-slick-rails-demo) simple R
 If you are using Slick with Turbolinks, you might run into some problems with the browser's "back" button.
 If that happens, the following solution *might help*. Add this code to your *layouts/application.html.erb*:
 
-    <head>
-       <% if content_for?(:head) %>
-       <%= yield(:head) %>
-       <% end %>
-    </head>
+
+```erb
+<head>
+  <% if content_for?(:head) %>
+    <%= yield(:head) %>
+  <% end %>
+</head>
+```
 
 And then on any page that has Slick:
 
-    <% content_for :head do %>
-      <meta name="turbolinks-cache-control" content="no-cache">
-    <% end %>
-    
+```erb
+<% content_for :head do %>
+  <meta name="turbolinks-cache-control" content="no-cache">
+<% end %>
+```
+
 The idea is that we are [opting the page out of caching](https://github.com/turbolinks/turbolinks#opting-out-of-caching), as Turbolinks uses it during [restoration visits](https://github.com/turbolinks/turbolinks#restoration-visits) (that is, when you click "back").
 
 Another solution was to employ the `unslick` method to prepare your document before Turbolinks caches it:
 
-    jQuery(document).on('turbolinks:before-cache', $('.scroller').slick('unslick'))
-    
+```javascript
+jQuery(document).on('turbolinks:before-cache', $('.scroller').slick('unslick'))
+```
+    
 However, this does not seem to work anymore - maybe because [Slick has lots of opened issues related to unslick](https://github.com/kenwheeler/slick/search?q=unslick&type=Issues&utf8=%E2%9C%93).
 
 Read more [on StackOverflow](http://stackoverflow.com/questions/39627881/jquery-plugin-initialization-on-browser-back-button-for-turbolinks-rails-5).
@@ -87,11 +111,15 @@ Read more [on StackOverflow](http://stackoverflow.com/questions/39627881/jquery-
 
 Run
 
-    $ bundle install
-    
+```console
+$ bundle install
+```
+
 and then
 
-    $ rake test
+```console
+$ rake test
+```
 
 ## Contributing
 
