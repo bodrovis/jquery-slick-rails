@@ -6,7 +6,7 @@
 |___/_|_|\___|_|\_(_)/ |___/
                    |__/
 
- Version: 1.7.1
+ Version: 1.8.0
   Author: Ken Wheeler
  Website: http://kenwheeler.github.io
     Docs: http://kenwheeler.github.io/slick
@@ -484,7 +484,7 @@
     var _ = this,
         i, dot;
 
-    if (_.options.dots === true) {
+    if (_.options.dots === true && _.slideCount > _.options.slidesToShow) {
 
       _.$slider.addClass('slick-dotted');
 
@@ -559,7 +559,7 @@
     newSlides = document.createDocumentFragment();
     originalSlides = _.$slider.children();
 
-    if(_.options.rows > 1) {
+    if(_.options.rows > 0) {
 
       slidesPerSection = _.options.slidesPerRow * _.options.rows;
       numOfSlides = Math.ceil(
@@ -821,7 +821,7 @@
 
     var _ = this, originalSlides;
 
-    if(_.options.rows > 1) {
+    if(_.options.rows > 0) {
       originalSlides = _.$slides.children().children();
       originalSlides.removeAttr('style');
       _.$slider.empty().append(originalSlides);
@@ -1322,9 +1322,12 @@
         });
 
         if (slideControlIndex !== -1) {
-          $(this).attr({
-            'aria-describedby': 'slick-slide-control' + _.instanceUid + slideControlIndex
-          });
+          var ariaButtonControl = 'slick-slide-control' + _.instanceUid + slideControlIndex
+          if ($('#' + ariaButtonControl).length) {
+            $(this).attr({
+              'aria-describedby': ariaButtonControl
+            });
+          }
         }
       });
 
@@ -1386,7 +1389,7 @@
 
     var _ = this;
 
-    if (_.options.dots === true) {
+    if (_.options.dots === true && _.slideCount > _.options.slidesToShow) {
       $('li', _.$dots).on('click.slick', {
         message: 'index'
       }, _.changeSlide);
@@ -1396,7 +1399,7 @@
       }
     }
 
-    if ( _.options.dots === true && _.options.pauseOnDotsHover === true ) {
+    if (_.options.dots === true && _.options.pauseOnDotsHover === true && _.slideCount > _.options.slidesToShow) {
 
       $('li', _.$dots)
           .on('mouseenter.slick', $.proxy(_.interrupt, _, true))
@@ -2490,7 +2493,7 @@
     if (_.options.infinite === false && _.options.centerMode === false && (index < 0 || index > _.getDotCount() * _.options.slidesToScroll)) {
       if (_.options.fade === false) {
         targetSlide = _.currentSlide;
-        if (dontAnimate !== true) {
+        if (dontAnimate !== true && _.slideCount > _.options.slidesToShow) {
           _.animateSlide(slideLeft, function() {
             _.postSlide(targetSlide);
           });
@@ -2502,7 +2505,7 @@
     } else if (_.options.infinite === false && _.options.centerMode === true && (index < 0 || index > (_.slideCount - _.options.slidesToScroll))) {
       if (_.options.fade === false) {
         targetSlide = _.currentSlide;
-        if (dontAnimate !== true) {
+        if (dontAnimate !== true && _.slideCount > _.options.slidesToShow) {
           _.animateSlide(slideLeft, function() {
             _.postSlide(targetSlide);
           });
@@ -2572,7 +2575,7 @@
       return;
     }
 
-    if (dontAnimate !== true) {
+    if (dontAnimate !== true && _.slideCount > _.options.slidesToShow) {
       _.animateSlide(targetLeft, function() {
         _.postSlide(animSlide);
       });
