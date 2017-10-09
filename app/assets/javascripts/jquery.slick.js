@@ -6,7 +6,7 @@
 |___/_|_|\___|_|\_(_)/ |___/
                    |__/
 
- Version: 1.8.0
+ Version: 1.8.1
   Author: Ken Wheeler
  Website: http://kenwheeler.github.io
     Docs: http://kenwheeler.github.io/slick
@@ -1354,7 +1354,11 @@
     }
 
     for (var i=_.currentSlide, max=i+_.options.slidesToShow; i < max; i++) {
-      _.$slides.eq(i).attr('tabindex', 0);
+      if (_.options.focusOnChange) {
+        _.$slides.eq(i).attr({'tabindex': '0'});
+      } else {
+        _.$slides.eq(i).removeAttr('tabindex');
+      }
     }
 
     _.activateADA();
