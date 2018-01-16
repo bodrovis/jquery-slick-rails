@@ -15,7 +15,6 @@ Gem::Specification.new do |s|
   s.test_files    = s.files.grep(%r{^(test|spec|features)/})
   s.require_paths = ["lib"]
   s.license       = 'MIT'
-  s.test_files    = Dir["test/**/*"]
 
   s.add_dependency 'railties', '>= 3.1'
   s.add_development_dependency "rails", "~> 5.1"
