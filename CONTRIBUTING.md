@@ -7,10 +7,10 @@ I am not an author of the Slick plugin and do not maintain it. Same for Turbolin
 If you need an example on how to integrate and use this gem in a Rails app, take a look at [this sample app](https://github.com/bodrovis/jquery-slick-rails-demo)
 created by me (it also covers usage with Turbolinks). If you are totally stuck and need further guidance, don't hesitate to contact me directly.
 
-If you wish to report a **problem related to this gem**, please provide
+If you wish to report a **problem related to this gem**, please provide:
 
 * Syptoms of the problem
-* Your Rails version
+* Your Ruby/Rails version
 * Version of the gem you are using
 * Error stack trace
 * Any errors/warnings displayed in the browser's console
