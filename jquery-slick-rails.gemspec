@@ -17,6 +17,6 @@ Gem::Specification.new do |s|
   s.license       = 'MIT'
 
   s.add_dependency 'railties', '>= 3.1'
-  s.add_development_dependency "rails", "~> 5.1"
+  s.add_development_dependency "rails", "~> 6.0"
   s.add_development_dependency 'test-unit', '~> 3.1'
 end
