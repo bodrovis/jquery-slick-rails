@@ -87,7 +87,9 @@ GEM
     mini_portile2 (2.4.0)
     minitest (5.13.0)
     nio4r (2.5.2)
-    nokogiri (1.10.7-x64-mingw32)
+    nokogiri (1.10.8)
+      mini_portile2 (~> 2.4.0)
+    nokogiri (1.10.8-x64-mingw32)
       mini_portile2 (~> 2.4.0)
     power_assert (1.1.5)
     rack (2.0.8)
@@ -141,6 +143,7 @@ GEM
     zeitwerk (2.2.2)
 
 PLATFORMS
+  ruby
   x64-mingw32
 
 DEPENDENCIES
