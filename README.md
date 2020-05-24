@@ -6,6 +6,8 @@
 A ruby gem that uses the Rails asset pipeline to include the jQuery Slick plugin by Ken Wheeler
 (https://kenwheeler.github.io/slick/).
 
+If you are using Rails 6 with Webpacker then you don't need this gem (install Slick directly from NPM instead). Check out [this sample app](https://github.com/bodrovis/jquery-slick-rails-demo/tree/master/Rails6Webpacker) for more info.
+
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -68,9 +70,9 @@ or into `application.css`:
 */
 ```
 
- 
-You may use [this](https://github.com/bodrovis/jquery-slick-rails-demo) simple Rails app as an example
-(it also shows how to use the plugin with Turbolinks).
+### Demos
+
+[Check out this repo showing how to use Slick carousel with Rails app with and without Webpacker](https://github.com/bodrovis/jquery-slick-rails-demo) (it also shows how to use the plugin with Turbolinks).
 
 ## Turbolinks Gotcha
 
