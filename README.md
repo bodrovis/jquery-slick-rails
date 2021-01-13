@@ -1,6 +1,6 @@
 # jQuerySlickRails
 
-[![Gem Version](https://badge.fury.io/rb/jquery-slick-rails.svg)](http://badge.fury.io/rb/jquery-slick-rails)
+![Gem](https://img.shields.io/gem/v/jquery-slick-rails)
 [![Build Status](https://travis-ci.com/bodrovis/jquery-slick-rails.svg?branch=master)](https://travis-ci.com/github/bodrovis/jquery-slick-rails)
 ![Downloads total](https://img.shields.io/gem/dt/jquery-slick-rails)
 
