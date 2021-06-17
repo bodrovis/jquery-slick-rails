@@ -102,7 +102,7 @@ The idea is that we are [opting the page out of caching](https://github.com/turb
 Another solution was to employ the `unslick` method to prepare your document before Turbolinks caches it:
 
 ```javascript
-jQuery(document).on('turbolinks:before-cache', $('.scroller').slick('unslick'))
+jQuery(document).on('turbolinks:before-cache', function() { $('.scroller').slick('unslick') })
 ```
     
 However, this does not seem to work anymore - maybe because [Slick has lots of opened issues related to unslick](https://github.com/kenwheeler/slick/search?q=unslick&type=Issues&utf8=%E2%9C%93).
