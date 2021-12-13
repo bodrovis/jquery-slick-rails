@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
   s.email       = ["golosizpru@gmail.com"]
   s.homepage    = "https://github.com/bodrovis/jquery-slick-rails"
   s.summary     = "Integrates Slick carousel into Rails app."
-  s.description = "Integrates Slick carousel, a jQuery plugin by Ken Wheeler, into your Rails app."
+  s.description = "Integrates Slick carousel, a jQuery plugin by Ken Wheeler, into your Rails app. THIS GEM IS DEPRECATED."
 
   s.files         = Dir["{lib,app}/**/*"] + ["LICENSE", "README.md"]
   s.executables   = s.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
@@ -17,6 +17,7 @@ Gem::Specification.new do |s|
   s.license       = 'MIT'
 
   s.add_dependency 'railties', '>= 3.1'
-  s.add_development_dependency "rails", "~> 6.0"
+  s.add_development_dependency "rails", "7.0.0.rc1"
+  s.add_development_dependency 'sprockets-rails', '~> 3.4'
   s.add_development_dependency 'test-unit', '~> 3.1'
 end
